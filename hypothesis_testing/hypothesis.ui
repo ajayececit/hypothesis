@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>461</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>450</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>700</width>
+    <height>700</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>P-Value Test</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>92</y>
+     <width>421</width>
+     <height>211</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Variables</string>
+   </property>
+   <widget class="QLineEdit" name="num_of_sample">
+    <property name="geometry">
+     <rect>
+      <x>215</x>
+      <y>20</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit{
+border: 2px solid rgb(37, 39, 40);
+border-radius : 10px;
+color: #000000;
+padding-left: 5px;
+padding-right: 5px;
+background-color: rgb(255, 255, 255);
+}
+QLineEdit:hover{
+border: 2px solid rgb(203, 203, 203);
+}
+QLineEdit:focus{
+border: 2px solid rgb(85, 170, 255);
+}</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>24</y>
+      <width>131</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string># of Samples (n)</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="population_mean">
+    <property name="geometry">
+     <rect>
+      <x>215</x>
+      <y>70</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit{
+border: 2px solid rgb(37, 39, 40);
+border-radius : 10px;
+color: #000000;
+padding-left: 5px;
+padding-right: 5px;
+background-color: rgb(255, 255, 255);
+}
+QLineEdit:hover{
+border: 2px solid rgb(203, 203, 203);
+}
+QLineEdit:focus{
+border: 2px solid rgb(85, 170, 255);
+}</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>69</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Population Mean (μ)</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>163</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Sample Mean (x̄)</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="sample_mean">
+    <property name="geometry">
+     <rect>
+      <x>215</x>
+      <y>160</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit{
+border: 2px solid rgb(37, 39, 40);
+border-radius : 10px;
+color: #000000;
+padding-left: 5px;
+padding-right: 5px;
+background-color: rgb(255, 255, 255);
+}
+QLineEdit:hover{
+border: 2px solid rgb(203, 203, 203);
+}
+QLineEdit:focus{
+border: 2px solid rgb(85, 170, 255);
+}</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>120</y>
+      <width>121</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Std Deviation (σ)</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="std_deviation">
+    <property name="geometry">
+     <rect>
+      <x>215</x>
+      <y>117</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit{
+border: 2px solid rgb(37, 39, 40);
+border-radius : 10px;
+color: #000000;
+padding-left: 5px;
+padding-right: 5px;
+background-color: rgb(255, 255, 255);
+}
+QLineEdit:hover{
+border: 2px solid rgb(203, 203, 203);
+}
+QLineEdit:focus{
+border: 2px solid rgb(85, 170, 255);
+}</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="compute_button">
+   <property name="geometry">
+    <rect>
+     <x>119</x>
+     <y>460</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Compute</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="cancel_button">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>460</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cancel</string>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_2">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>308</y>
+     <width>421</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Hypothesis</string>
+   </property>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>78</y>
+      <width>191</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Alternate Hypothesis (Ha)</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="alternate_hypothesis">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>223</x>
+      <y>77</y>
+      <width>171</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit{
+border: 2px solid rgb(37, 39, 40);
+border-radius : 10px;
+color: #000000;
+padding-left: 5px;
+padding-right: 5px;
+background-color: rgb(203, 203, 203);
+}
+QLineEdit:hover{
+border: 2px solid rgb(203, 203, 203);
+}
+QLineEdit:focus{
+border: 2px solid rgb(85, 170, 255);
+}
+</string>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="null_hypothesis">
+    <property name="geometry">
+     <rect>
+      <x>313</x>
+      <y>30</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit{
+border: 2px solid rgb(37, 39, 40);
+border-radius : 10px;
+color: #000000;
+padding-left: 5px;
+padding-right: 5px;
+background-color: rgb(255, 255, 255);
+}
+QLineEdit:hover{
+border: 2px solid rgb(203, 203, 203);
+}
+QLineEdit:focus{
+border: 2px solid rgb(85, 170, 255);
+}</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>34</y>
+      <width>201</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Null Hypothesis (H0)</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox">
+    <property name="geometry">
+     <rect>
+      <x>223</x>
+      <y>30</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QComboBox{
+border-radius : 10px;
+color: #000000;
+padding-left: 5px;
+padding-right: 5px;
+background-color: rgb(255, 255, 255);
+}
+QComboBox:hover{
+border: 2px solid rgb(203, 203, 203);
+}
+QComboBox:focus{
+border: 2px solid rgb(85, 170, 255);
+}</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_3">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>421</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Calculation Method</string>
+   </property>
+   <widget class="QRadioButton" name="proportion_button">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>86</x>
+      <y>47</y>
+      <width>261</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Calculate with Propotions</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="mean_radio">
+    <property name="geometry">
+     <rect>
+      <x>86</x>
+      <y>20</y>
+      <width>251</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Calculate with Mean</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
